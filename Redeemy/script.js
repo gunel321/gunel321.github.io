@@ -7,5 +7,5 @@ document.addEventListener('scroll', () => {
 
     // Set brightness based on scroll
     const brightness = 0.3 + (scrollFraction * 0.6); // Adjust starting/ending brightness
-    document.querySelector('.fixed-bg').style.filter = `brightness(${brightness * 100}%)`;
+    document.getElementById('fixed-bg').style.filter = `brightness(${brightness * 100}%)`;
 });
