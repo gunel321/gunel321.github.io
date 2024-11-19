@@ -2,10 +2,27 @@
 document.addEventListener('scroll', () => {
     // Calculate scroll progress (from 0 to 1)
     const scrollTop = window.scrollY;
-    const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollFraction = scrollTop / windowHeight;
-
+    const headerHeight = document.getElementById('headerArea').clientHeight;
+    const startBrightness = 0.25;
+    let scrollFraction = scrollTop / headerHeight;
+    if (scrollFraction > 1) {
+        scrollFraction = 1;
+    }
+    
     // Set brightness based on scroll
-    const brightness = 0.3 + (scrollFraction * 0.6); // Adjust starting/ending brightness
+    const brightness = startBrightness + scrollFraction * (1-startBrightness); // Adjust starting/ending brightness
     document.getElementById('fixed-bg').style.filter = `brightness(${brightness * 100}%)`;
 });
+
+// document.addEventListener('scroll', () => {
+//     const scrollTop = window.scrollY;
+//     let fixedBg = document.getElementById('fixed-bg');
+
+//     if (scrollTop > 150) {
+//         fixedBg.style.position = 'sticky';
+//         fixedBg.style.top = '0px';
+//     }
+//     else {
+//         fixedBg.style.position = 'static';
+//     }
+// });

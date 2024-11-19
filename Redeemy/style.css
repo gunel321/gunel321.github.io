@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 20000px; /* Ensure the container takes the full viewport height */
+}
+
+.fixed-bg {
+    transition: filter 0.1s ease;
+    filter: brightness(40%);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: -1;
+}
+
+@font-face {
+    font-family: titleFont;
+    src: url(misc/redeemyFont.otf);
+}
+
+.title {
+    font-family: titleFont;
+    letter-spacing: 0.5px;
+    font-size: 60px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.textPlace{
+    display: flex;
+    background-color: #4E9F3D;
+    color: #dce4c8;
+    padding: 20px;
+}
+
+.textBoxes{
+    background-color: #191A19;
+    opacity: 80%;
+    width: 600px;
+    height: 600px;
+    color: #D8E9A8;
+}
+
+#redeemy_logo{
+    width: 200px;
+    height: 200px;
+}
+
+#head_bottom_bar{
+    background-color: #1E5128; 
+    width: 100%; 
+    height: 15px;
+}
