@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Image</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            position: absolute; /* Initial position */
+            transition: position 0.3s ease; /* Optional: smooth transition */
+        }
+
+        img.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .content {
+            height: 2000px;
+            padding-top: 500px; /* To simulate content height */
+        }
+        .top {
+            height: 250px; /* Space in here for search */
+            padding-top: 40px;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header" class="top">
+        <img src="grodalogga.png" alt="Logo" style="height: 50px;">
+        <h1>Website Title</h1>
+    </header>
+    <img id="image" src="malaysiatrash.jpg" alt="Main Image">
+    <div class="content">
+        <p>Scroll down to see the effect.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
