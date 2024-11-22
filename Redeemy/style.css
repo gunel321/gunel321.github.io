@@ -5,7 +5,7 @@ html, body {
 }
 
 .container {
-    height: 20000px; /* Ensure the container takes the full viewport height */
+    height: 5000px; /* Ensure the container takes the full viewport height */
 }
 
 .fixed-bg {
@@ -22,6 +22,7 @@ html, body {
     src: url(misc/redeemyFont.otf);
 }
 
+
 .title {
     font-family: titleFont;
     letter-spacing: 0.5px;
@@ -37,11 +38,17 @@ html, body {
     padding: 20px;
 }
 
-.textBoxes{
+.textBoxes {
+    display: flex;
+    text-align: center;
     background-color: #191A19;
-    opacity: 80%;
     width: 600px;
     height: 600px;
+    margin-left: 150px;
+    margin-top: -150px;
+}
+
+.textBoxesText{
     color: #D8E9A8;
 }
 
@@ -54,4 +61,27 @@ html, body {
     background-color: #1E5128; 
     width: 100%; 
     height: 15px;
+}
+
+.parent-element {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button-link {
+    background: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    border-left: #1E5128#D8E9A8;
+    /* margin-right: 35px; */
+    /* padding-right: 35px; */
+    font-size: 28px;
+    font-family:'Times New Roman', Times, serif;
+    color: #D8E9A8;
+    text-align: center;
+    height: 100px;
+    width: 200px;
 }
